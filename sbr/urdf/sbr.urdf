@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="sbr">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-2.76555700180758E-05 0.227704467918155 0.0583610098036684"
+        rpy="0 0 0" />
+      <mass
+        value="6.01926486550684" />
+      <inertia
+        ixx="0.056170551553721"
+        ixy="6.07079296742871E-07"
+        ixz="-1.55346959887611E-06"
+        iyy="0.0639535245178406"
+        iyz="-0.0195604065491136"
+        izz="0.0795529085731348" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="cont_1">
+    <inertial>
+      <origin
+        xyz="-0.0059438 -0.050574 -0.071771"
+        rpy="0 0 0" />
+      <mass
+        value="0.33847" />
+      <inertia
+        ixx="0.0029734"
+        ixy="-1.3483E-06"
+        ixz="-1.9134E-06"
+        iyy="0.0018709"
+        iyz="-0.001064"
+        izz="0.0011107" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/cont_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/cont_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cont_1j"
+    type="revolute">
+    <origin
+      xyz="-0.197 0.11544 0"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="cont_1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Rleg_4">
+    <inertial>
+      <origin
+        xyz="0.0195946903053816 -0.0850698143687041 0.0872274208634162"
+        rpy="0 0 0" />
+      <mass
+        value="0.415086272244255" />
+      <inertia
+        ixx="0.00739303973811856"
+        ixy="-0.000120155142096434"
+        ixz="0.000126214228537311"
+        iyy="0.00388856471860554"
+        iyz="0.00359526421237412"
+        izz="0.00366248839387767" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/Rleg_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/Rleg_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rleg_4j"
+    type="revolute">
+    <origin
+      xyz="-0.0119999999999999 -0.144003509130375 -0.204359950475016"
+      rpy="0 0 0" />
+    <parent
+      link="cont_1" />
+    <child
+      link="Rleg_4" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cran_2">
+    <inertial>
+      <origin
+        xyz="-0.000682764334533015 -0.0734645807338099 -0.043738889902025"
+        rpy="0 0 0" />
+      <mass
+        value="0.12243957571292" />
+      <inertia
+        ixx="0.000530172498653941"
+        ixy="-7.34139310083131E-06"
+        ixz="-4.2720303242008E-06"
+        iyy="0.000155833844911724"
+        iyz="-0.000220671382760022"
+        izz="0.000395660393177888" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/cran_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/cran_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cran_2j"
+    type="revolute">
+    <origin
+      xyz="-0.195 0.229790683682288 0.164085587903017"
+      rpy="3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="cran_2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Rleg_3">
+    <inertial>
+      <origin
+        xyz="0.0195946903053818 -0.154319093338658 0.159369900509516"
+        rpy="0 0 0" />
+      <mass
+        value="0.415086272244255" />
+      <inertia
+        ixx="0.00739303973811856"
+        ixy="-0.000120155142096434"
+        ixz="0.000126214228537311"
+        iyy="0.00388856471860554"
+        iyz="0.00359526421237412"
+        izz="0.00366248839387767" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/Rleg_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/Rleg_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rleg_3j"
+    type="revolute">
+    <origin
+      xyz="-0.01 -0.189108047489418 -0.112419510649797"
+      rpy="0 0 0" />
+    <parent
+      link="cran_2" />
+    <child
+      link="Rleg_3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cont_6">
+    <inertial>
+      <origin
+        xyz="-0.00594378099244974 -0.0601675364389161 0.0638280358809282"
+        rpy="0 0 0" />
+      <mass
+        value="0.3384745517817" />
+      <inertia
+        ixx="0.00297344569042236"
+        ixy="-1.60342960470081E-06"
+        ixz="1.70534778750191E-06"
+        iyy="0.00156038050771122"
+        iyz="0.00112769547111833"
+        izz="0.00142130578663051" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/cont_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/cont_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cont_6j"
+    type="revolute">
+    <origin
+      xyz="0.197 0.115436866353291 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="cont_6" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Lleg_9">
+    <inertial>
+      <origin
+        xyz="0.0195947514615937 -0.097983638734368 -0.0724203250605406"
+        rpy="0 0 0" />
+      <mass
+        value="0.415086883864536" />
+      <inertia
+        ixx="0.0073930389839479"
+        ixy="-0.000138876107863853"
+        ixz="-0.000105268818343775"
+        iyy="0.0027420874104242"
+        iyz="-0.00344538866570124"
+        izz="0.00480896649112852" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/Lleg_9.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/Lleg_9.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Lleg_9j"
+    type="revolute">
+    <origin
+      xyz="-0.01 -0.171274550513312 0.18199730260285"
+      rpy="0 0 0" />
+    <parent
+      link="cont_6" />
+    <child
+      link="Lleg_9" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cran_7">
+    <inertial>
+      <origin
+        xyz="0.0493172483668554 -0.0799465841130305 0.0303096858562807"
+        rpy="0 0 0" />
+      <mass
+        value="0.122439645946318" />
+      <inertia
+        ixx="0.000530172609465354"
+        ixy="-7.91179021459104E-06"
+        ixz="3.0903454756215E-06"
+        iyy="8.78881626797365E-05"
+        iyz="0.000166685556193853"
+        izz="0.000463606241471678" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/cran_7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/cran_7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cran_7j"
+    type="revolute">
+    <origin
+      xyz="0.145 0.229766466738778 0.163947437470892"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="cran_7" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Lleg_8">
+    <inertial>
+      <origin
+        xyz="0.0195947514615937 -0.177927551136723 -0.132495035794797"
+        rpy="0 0 0" />
+      <mass
+        value="0.415086883864536" />
+      <inertia
+        ixx="0.0073930389839479"
+        ixy="-0.000138876107863853"
+        ixz="-0.000105268818343775"
+        iyy="0.0027420874104242"
+        iyz="-0.00344538866570124"
+        izz="0.00480896649112852" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/Lleg_8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/Lleg_8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Lleg_8j"
+    type="revolute">
+    <origin
+      xyz="0.042 -0.205660238496444 0.0781272442979122"
+      rpy="0 0 0" />
+    <parent
+      link="cran_7" />
+    <child
+      link="Lleg_8" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_wheel">
+    <inertial>
+      <origin
+        xyz="0.0808553858050179 1.64699758713471E-05 -1.44911854014218E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.958008204798537" />
+      <inertia
+        ixx="0.00270268771937038"
+        ixy="4.68694410174272E-07"
+        ixz="-3.47872768401154E-07"
+        iyy="0.00158536502830886"
+        iyz="-1.5648494833664E-08"
+        izz="0.00158534911261536" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_j"
+    type="continuous">
+    <origin
+      xyz="-0.17363 -0.21975 0.0060512"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel" />
+    <axis
+      xyz="1 0.00013999 -0.00011825" />
+  </joint>
+  <link
+    name="right_wheel">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_j"
+    type="continuous">
+    <origin
+      xyz="0.175878995127272 -0.276735707333555 0.016744904728899"
+      rpy="3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+</robot>
