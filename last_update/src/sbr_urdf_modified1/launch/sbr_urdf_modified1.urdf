@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="sbr_urdf_modified1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="6.0193" />
+      <inertia
+        ixx="0.056171"
+        ixy="6.0708E-07"
+        ixz="-1.5535E-06"
+        iyy="0.063954"
+        iyz="-0.01956"
+        izz="0.079553" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="cont_1">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.33847" />
+      <inertia
+        ixx="0.0029734"
+        ixy="-1.3483E-06"
+        ixz="-1.9134E-06"
+        iyy="0.0018709"
+        iyz="-0.001064"
+        izz="0.0011107" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/cont_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/cont_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cont_1j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="cont_1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="200"
+      velocity="3" />
+  </joint>
+  <link
+    name="Rleg_4">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.41509" />
+      <inertia
+        ixx="0.007393"
+        ixy="-0.00012016"
+        ixz="0.00012621"
+        iyy="0.0038886"
+        iyz="0.0035953"
+        izz="0.0036625" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/Rleg_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/Rleg_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rleg_4j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="cont_1" />
+    <child
+      link="Rleg_4" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cran_2">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.12244" />
+      <inertia
+        ixx="0.00053017"
+        ixy="-7.3414E-06"
+        ixz="-4.272E-06"
+        iyy="0.00015583"
+        iyz="-0.00022067"
+        izz="0.00039566" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/cran_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/cran_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cran_2j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="cran_2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Rleg_3">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.41509" />
+      <inertia
+        ixx="0.007393"
+        ixy="-0.00012016"
+        ixz="0.00012621"
+        iyy="0.0038886"
+        iyz="0.0035953"
+        izz="0.0036625" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/Rleg_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/Rleg_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rleg_3j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="cran_2" />
+    <child
+      link="Rleg_3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cont_6">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="6.3577" />
+      <inertia
+        ixx="0.059144"
+        ixy="-9.9635E-07"
+        ixz="1.5188E-07"
+        iyy="0.065514"
+        iyz="-0.018433"
+        izz="0.080974" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/cont_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/cont_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cont_6j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="cont_6" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="200"
+      velocity="3" />
+  </joint>
+  <link
+    name="Lleg_9">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.41509" />
+      <inertia
+        ixx="0.007393"
+        ixy="-0.00013888"
+        ixz="-0.00010527"
+        iyy="0.0027421"
+        iyz="-0.0034454"
+        izz="0.004809" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/Lleg_9.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/Lleg_9.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Lleg_9j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="cont_6" />
+    <child
+      link="Lleg_9" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cran_7">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.12244" />
+      <inertia
+        ixx="0.00053017"
+        ixy="-7.9118E-06"
+        ixz="3.0903E-06"
+        iyy="8.7888E-05"
+        iyz="0.00016669"
+        izz="0.00046361" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/cran_7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/cran_7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cran_7j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="cran_7" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Lleg_8">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.41509" />
+      <inertia
+        ixx="0.007393"
+        ixy="-0.00013888"
+        ixz="-0.00010527"
+        iyy="0.0027421"
+        iyz="-0.0034454"
+        izz="0.004809" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/Lleg_8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/Lleg_8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Lleg_8j"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="cran_7" />
+    <child
+      link="Lleg_8" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_wheel">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.95801" />
+      <inertia
+        ixx="0.0027027"
+        ixy="4.6869E-07"
+        ixz="-3.4787E-07"
+        iyy="0.0015854"
+        iyz="-1.5648E-08"
+        izz="0.0015853" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_j"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel" />
+    <axis
+      xyz="1 0.00013999 -0.00011825" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="500"
+      velocity="5" />
+  </joint>
+  <link
+    name="right_wheel">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.95801" />
+      <inertia
+        ixx="0.0027025"
+        ixy="-1.0584E-05"
+        ixz="7.6501E-06"
+        iyy="0.0015855"
+        iyz="-7.1042E-08"
+        izz="0.0015854" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sbr_urdf_modified1/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_j"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="500"
+      velocity="5" />
+  </joint>
+
+  <transmission name="cont_1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="cont_1j">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="cont_1">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  </transmission>
+  <transmission name="Rleg_4">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rleg_4j">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rleg_4">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  </transmission>
+
+  <transmission name="cran_2">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="cran_2j">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="cran_2">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  </transmission>
+
+  <transmission name="Rleg_3">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rleg_3j">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rleg_3">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  </transmission>
+
+  <transmission name="cont_6">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="cont_6j">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="cont_6">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  </transmission>
+
+  <transmission name="Lleg_9">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Lleg_9j">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Lleg_9">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  </transmission>
+
+  <transmission name="cran_7">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="cran_7j">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="cran_7">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  </transmission>
+  
+  <transmission name="Lleg_8">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Lleg_8j">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Lleg_8">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  </transmission>
+  
+  <transmission name="left_wheel">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_wheel_j">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="left_wheel">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  </transmission>
+
+  <transmission name="right_wheel">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_wheel_j">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="right_wheel">
+  <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  </transmission>
+
+  <gazebo>
+<plugin name="control" filename="libgazebo_ros_control.so">
+<robotNamespace>/</robotNamespace>
+</plugin>
+</gazebo>
+
+<gazebo reference="cont_1">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="Rleg_4">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="cran_2">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="Rleg_3">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="cont_6">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="Lleg_9">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="cran_7">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="Lleg_8">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="left_wheel">
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="right_wheel">
+  <selfCollide>true</selfCollide>
+</gazebo>
+</robot>
+
